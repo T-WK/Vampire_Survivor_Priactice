@@ -6,11 +6,6 @@ public class CameraMove : MonoBehaviour
     public Vector3 offset = new Vector3(0, 20, -30);
     public float zoomSpeed = 1f;
 
-    private void Awake()
-    {
-        // camera_Actions = new Camera_Actions();
-    }
-
     public void OnMouseScrollY(InputValue value)
     {
         float zoomDelta = value.Get<float>() * zoomSpeed;
