@@ -5,10 +5,12 @@ public class PlayerMove : MonoBehaviour
 {
     private Player player;
     private Vector2 movement;
+    private Animator anim;
 
     void Awake()
     {
         player = GetComponent<Player>();
+        anim = GetComponent<Animator>();
     }
 
     public void OnMove(InputValue value)
@@ -30,5 +32,10 @@ public class PlayerMove : MonoBehaviour
         }
 
         transform.position += move * speed * Time.deltaTime;
+
+        if (anim != null)
+        {
+            anim.SetFloat("Speed", move.magnitude);
+        }
     }
 }
