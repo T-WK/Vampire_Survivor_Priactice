@@ -5,13 +5,13 @@ public class PlayerAttack : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public Unit Player;
+    private Unit Player;
 
     private void Awake() {
         Player = GetComponent<Unit>();
     }
 
-    void OnAttack(InputValue value)
+    public void OnAttack(InputValue value)
     {
         if (value.isPressed)
         {

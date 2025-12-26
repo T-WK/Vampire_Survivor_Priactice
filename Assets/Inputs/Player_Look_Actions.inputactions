@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "Player_Look_Actions",
+    "maps": [
+        {
+            "name": "PlayerLookActions",
+            "id": "ee9e3027-ff2c-470a-b72a-4f9464b936e9",
+            "actions": [
+                {
+                    "name": "LookPoint",
+                    "type": "Value",
+                    "id": "7fd15445-9f48-44b0-a2d8-fcd1245b19d9",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "21be5854-ab10-4328-aac3-41e0ea8e93d1",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LookPoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

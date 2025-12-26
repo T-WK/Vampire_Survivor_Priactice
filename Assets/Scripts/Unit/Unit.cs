@@ -36,6 +36,8 @@ public class Unit : MonoBehaviour, IDamageable, IFactionMember
 
     // IFactionMember implementation
     public Faction UnitFaction { get; set; } = Faction.Unknown;
+    public bool IsEnemy => UnitFaction == Faction.Enemy;
+    public bool IsPlayer => UnitFaction == Faction.Player;
 
     // IDamageable implementation
     public float InvincibleLength => 2.0f; // 무적 시간 (초)
@@ -50,13 +52,25 @@ public class Unit : MonoBehaviour, IDamageable, IFactionMember
         }
 
         currentHp -= damage;
-        InvincibleCounter = InvincibleLength;
+        InvincibleCounter = IsPlayer ? InvincibleLength : 0f;
 
         Debug.Log(UnitFaction + " took " + damage + " damage. Current HP: " + currentHp);
 
         if (IsDead)
         {
             Debug.Log(UnitFaction + " is dead.");
+
+            switch (UnitFaction)
+            {
+                case Faction.Player:
+                    // 플레이어 사망 처리 로직 추가
+                    Debug.Log("Player has died. Implement respawn or game over logic here.");
+                    break;
+                case Faction.Enemy:
+                default:
+                    Destroy(gameObject);
+                    break;
+            }
         }
     }
 

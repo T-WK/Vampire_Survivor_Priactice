@@ -5,6 +5,7 @@ public class UnitStat
 {
     public int Attack;                      // 공격력
     public float AttackSpeed;               // 공격 속도
+    public float ProjectileSpeed;           // 투사체 속도
     public float AttackRange;               // 공격 범위
     public int MaxHp;                       // 최대 체력
     public float MaxStamina;                // 최대 스태미너
@@ -16,6 +17,7 @@ public class UnitStat
     {
         Attack = baseData.baseAttack;
         AttackSpeed = baseData.baseAttackSpeed;
+        ProjectileSpeed = baseData.projectileSpeed;
         AttackRange = baseData.baseAttackRange;
         MaxHp = baseData.baseMaxHp;
         MaxStamina = baseData.baseMaxStamina;
@@ -29,7 +31,7 @@ public class UnitStat
         Attack += modifier.addAttack;           // 공격력
         AttackSpeed += modifier.addAttackSpeed; // 공속
         AttackRange += modifier.addAttackRange; // 사거리
-
+        ProjectileSpeed += modifier.addProjectileSpeed; // 투사체 속도
         MaxHp += modifier.addMaxHp;             // 최대 체력
         MaxStamina += modifier.addMaxStamina;   // 최대 스태미너
         MoveSpeed += modifier.addMoveSpeed;    // 이동 속도
