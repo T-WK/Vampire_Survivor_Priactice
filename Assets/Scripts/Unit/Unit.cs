@@ -12,6 +12,7 @@ public class Unit : MonoBehaviour, IDamageable, IFactionMember
 
     public float MoveSpeed => CurrentStat.MoveSpeed;
     public float CurrentStamina => currentStamina;
+    public float AttackDamage => CurrentStat.Attack;
 
     public virtual void Initialize(UnitData data)
     {

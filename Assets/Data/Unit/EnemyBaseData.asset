@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efaa1ee80563e6541adfce20065330ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 0808b3853bf25fe46a6b51579074cb8e, type: 3}
   m_Name: EnemyBaseData
   m_EditorClassIdentifier: Assembly-CSharp::UnitData
   baseAttack: 5
   baseAttackSpeed: 0
   baseAttackRange: 0
-  baseMaxHp: 50
+  baseMaxHp: 30
   baseMaxStamina: 0
   baseMoveSpeed: 3
   baseCriticalChance: 0

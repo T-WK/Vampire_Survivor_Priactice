@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efaa1ee80563e6541adfce20065330ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 0808b3853bf25fe46a6b51579074cb8e, type: 3}
   m_Name: PlayerBaseData
   m_EditorClassIdentifier: Assembly-CSharp::UnitData
-  baseAttack: 100
-  baseAttackSpeed: 0.8
+  baseAttack: 10
+  baseAttackSpeed: 0.6
   baseAttackRange: 500
-  baseMaxHp: 150
-  baseMaxStamina: 80
+  baseMaxHp: 100
+  baseMaxStamina: 50
   baseMoveSpeed: 5
   baseCriticalChance: 0
-  baseCriticalDamagePercent: 1.3
+  baseCriticalDamagePercent: 1.2
