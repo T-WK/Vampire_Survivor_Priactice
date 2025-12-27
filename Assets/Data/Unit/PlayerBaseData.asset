@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UnitData
   baseAttack: 10
   baseAttackSpeed: 0.6
-  projectileSpeed: 0
+  projectileSpeed: 10000
   baseAttackRange: 500
   baseMaxHp: 100
   baseMaxStamina: 50

@@ -8,16 +8,13 @@ public class Unit : MonoBehaviour, IDamageable, IFactionMember
     public List<StatModifier> modifiers;
 
     public float currentHp;
-    public float currentStamina;
 
-    public float MoveSpeed => CurrentStat.MoveSpeed;
-    public float CurrentStamina => currentStamina;
+    public float MoveSpeed => CurrentStat != null ? CurrentStat.MoveSpeed : 0f;
     public float AttackDamage => CurrentStat.Attack;
 
     public virtual void Initialize(UnitData data)
     {
         currentHp = data.baseMaxHp;
-        currentStamina = data.baseMaxStamina;
 
         baseUnitData = data;
         modifiers = new List<StatModifier>();
