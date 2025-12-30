@@ -1,8 +1,3 @@
-﻿<Solution>
-  <Project Path="Unity.InputSystem.csproj" />
+<Solution>
   <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="Unity.VisualStudio.Editor.csproj" />
-  <Project Path="Unity.InputSystem.TestFramework.csproj" />
-  <Project Path="Unity.InputSystem.ForUI.csproj" />
-  <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
 </Solution>

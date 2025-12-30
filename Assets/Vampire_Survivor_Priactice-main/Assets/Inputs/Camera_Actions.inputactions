@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "Camera_Actions",
+    "maps": [
+        {
+            "name": "Camera",
+            "id": "c304e516-99d1-43be-ab95-4992e59c70d4",
+            "actions": [
+                {
+                    "name": "MouseScrollY",
+                    "type": "PassThrough",
+                    "id": "26559722-c8fd-4927-8721-f0fa91158e9f",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "011820c0-65ca-45af-abb0-dca8ea52224a",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseScrollY",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
