@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour
 
         if (anim != null)
         {
-            anim.SetFloat("Speed", move.magnitude);
+            anim.SetFloat("Speed", move.magnitude * multiplier);
         }
     }
 }

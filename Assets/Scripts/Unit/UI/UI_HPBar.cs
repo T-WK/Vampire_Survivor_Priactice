@@ -53,7 +53,6 @@ public class UI_HPBar : MonoBehaviour
 
         if (unitAnim != null)
         {
-            // 파트장님 설정: 애니메이터의 HP 파라미터 업데이트
             unitAnim.SetFloat("HP", curHp);
         }
     }
