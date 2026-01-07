@@ -38,8 +38,6 @@ public class PlayerMove : MonoBehaviour
             player.CurrentStamina += 5f * Time.deltaTime; // 스태미나 회복
         }
 
-        Debug.Log("Current Stamina: " + player.CurrentStamina);
-
         if (player.CurrentStamina <= 0f)
         {
             multiplier = 0.5f; // 스태미나가 없으면 속도 감소

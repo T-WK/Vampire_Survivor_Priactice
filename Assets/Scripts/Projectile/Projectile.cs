@@ -5,11 +5,13 @@ public class Projectile : MonoBehaviour
     public float speed;
     public float damage;
     public float lifeTime = 5f;
+    public Vector3 direction;
 
-    public void Init(float speed, float damage)
+    public void Init(float speed, float damage, Vector3 direction)
     {
         this.speed = speed;
         this.damage = damage;
+        this.direction = direction;
     }
 
     void Start()
@@ -19,7 +21,7 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(direction * speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other) {

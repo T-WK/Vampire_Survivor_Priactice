@@ -13,6 +13,9 @@ public class UnitStat
     public float CriticalChance;            // 치명타 확률
     public float CriticalDamagePercent;     // 치명타 피해량 배율
 
+    public int Level { get; set; } = 1;
+    public int Experience { get; set; } = 0;
+
     public UnitStat(UnitData baseData)
     {
         Attack = baseData.baseAttack;

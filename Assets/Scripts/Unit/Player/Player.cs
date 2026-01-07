@@ -17,6 +17,7 @@ public class Player : Unit, IHealable
     {
         Debug.Log("Player Awake");
         TargetProvider.Player = transform;
+        TargetProvider.WeaponController = GetComponent<WeaponController>();
         Initialize(baseUnitData);
     }
 
