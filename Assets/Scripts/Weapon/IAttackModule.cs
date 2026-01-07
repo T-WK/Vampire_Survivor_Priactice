@@ -15,4 +15,6 @@ public interface IAttackModule
     void Tick(float deltaTime);
     void Fire(IDamageable[] targets, int targetCount, UnitStat unitStat);
     public int TargetCount { get; }
+    public WeaponID WeaponID { get; }
+    void ModuleLevelUP();
 }

@@ -1,6 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+struct AttackModuleInfo
+{
+    public WeaponID weaponID;
+    public int index;
+};
+
 public class WeaponController : MonoBehaviour
 {
     [Header("Targeting")]
@@ -12,6 +18,7 @@ public class WeaponController : MonoBehaviour
 
     Collider[] hits;
     private List<IAttackModule> attackModules = new List<IAttackModule>();
+    private List<AttackModuleInfo> attackModuleInfos = new List<AttackModuleInfo>();
 
     private Player player;
 
@@ -29,6 +36,28 @@ public class WeaponController : MonoBehaviour
 
     public void AddAttackModule(IAttackModule module)
     {
+        WeaponID weaponID = module.WeaponID;
+        foreach (AttackModuleInfo info in attackModuleInfos)
+        {
+            if (info.weaponID == weaponID)
+            {
+                Debug.Log($"WeaponController: 이미 동일한 무기ID({weaponID})의 공격 모듈이 존재합니다.");
+                Debug.Log("해당 무기의 레벨을 증가시킵니다.");
+
+
+                IAttackModule existingModule = attackModules[info.index];
+                existingModule.ModuleLevelUP();
+
+                return;
+            }
+        }
+
+        AttackModuleInfo newInfo = new AttackModuleInfo
+        {
+            weaponID = weaponID,
+            index = attackModules.Count
+        };
+        attackModuleInfos.Add(newInfo);
         attackModules.Add(module);
     }
 

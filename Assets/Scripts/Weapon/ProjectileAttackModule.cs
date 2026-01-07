@@ -10,6 +10,8 @@ public class ProjectileAttackModule : IAttackModule
 
     public int TargetCount => weaponData != null ? weaponData.targetCount : 0;
 
+    public WeaponID WeaponID => weaponData != null ? weaponData.weaponID : WeaponID.None;
+
     public void Init(WeaponData weaponData, Transform firePoint)
     {
         this.weaponData = weaponData;
@@ -33,6 +35,8 @@ public class ProjectileAttackModule : IAttackModule
         {
             return; // 쿨다운 중이면 발사하지 않음
         }
+
+        Debug.Log(moduleStat.ToString());
 
         float damage = moduleStat.AttackDamage + unitStat.Attack;
         float speed = moduleStat.ProjectileMoveSpeed + unitStat.ProjectileSpeed;
@@ -81,5 +85,10 @@ public class ProjectileAttackModule : IAttackModule
 
         // 쿨다운 초기화
         cooldownTimer = 1f / weaponData.attackInterval;
+    }
+
+    public void ModuleLevelUP()
+    {
+        moduleStat.UpgradeModule(weaponData);
     }
 }

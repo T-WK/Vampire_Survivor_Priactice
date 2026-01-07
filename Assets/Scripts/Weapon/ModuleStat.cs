@@ -62,4 +62,12 @@ public class ModuleStat
             ProjectileCount = AttackDirections.Count;
         }
     }
+
+    public override string ToString()
+    {
+        return $"[ModuleStat] WeaponName: {WeaponName}, Level: {ModuleLevel}, TargetCount: {TargetCount}, " +
+               $"AttackDamage: {AttackDamage}, AttackInterval: {AttackInterval}, " +
+               $"ProjectileMoveSpeed: {ProjectileMoveSpeed}, AttackRange: {AttackRange}, " +
+               $"ProjectileCount: {ProjectileCount}, Directions: {string.Join(", ", AttackDirections)}";
+    }
 }

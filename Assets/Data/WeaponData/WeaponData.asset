@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e5e46ba0127654091a6687da1190a3, type: 3}
   m_Name: WeaponData
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  weaponID: 1
   weaponName: Test Projectile Weapn
   attackDamage: 10
   attackInterval: 0.6
-  projectileMoveSpeed: 50
+  projectileMoveSpeed: 30
   attackRange: 100
   targetCount: 0
   weaponIcon: {fileID: 0}
   projectilePrefab: {fileID: 8606756905568790383, guid: bab75fd6bf7b6714babac416a0db1f0a, type: 3}
   attackType: 1
-  upgradeAttackDamage: 0
-  upgradeAttackInterval: 0
-  upgradeProjectileMoveSpeed: 0
-  upgradeAttackRange: 0
+  upgradeAttackDamage: 10
+  upgradeAttackInterval: 0.1
+  upgradeProjectileMoveSpeed: 5
+  upgradeAttackRange: 20
