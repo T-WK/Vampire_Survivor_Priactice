@@ -1917,7 +1917,8 @@ PrefabInstance:
       propertyPath: hpSlider
       value: 
       objectReference: {fileID: 1143543016}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6240590419740264144, guid: 4f674942f634f5147972d21113f7de79, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
