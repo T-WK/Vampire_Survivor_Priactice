@@ -27,16 +27,6 @@ public class PlayerMove : MonoBehaviour
         Vector3 move = new Vector3(h, 0f, v).normalized;
         float multiplier = 1f;
 
-        if (move.magnitude > 0.1f)
-        {
-            // 캐릭터가 입력 방향을 부드럽게 바라보게 함
-            Quaternion targetRotation = Quaternion.LookRotation(move);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
-
-            // 이동 적용
-            transform.position += move * speed * Time.deltaTime * multiplier;
-        }
-
 
         if (Keyboard.current.leftShiftKey.isPressed)
         {
